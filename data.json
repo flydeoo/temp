@@ -1,1 +1,11 @@
-{"cols":[{"label":"Date","type":"date"},{"label":"dollar rate","type":"number"}],"rows":[{"c":[{"v":"Date(2008, 1, 28)","f":null},{"v":20000,"f":null}]},{"c":[{"v":"Date(2009, 1, 28)","f":null},{"v":30000,"f":null}]},{"c":[{"v":"Date(2010, 1, 28)","f":null},{"v":40000,"f":null}]},"{\"c\":[{\"v\": \"Date(2022,2,10)\",\"f\":null},{\"v\":256960,\"f\":null}]}"]}
+{
+  "cols": [
+        {"label":"Date","type":"date"},
+        {"label":"dollar rate","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v": "Date(2008, 1, 28)","f":null},{"v":20000,"f":null}]},
+        {"c":[{"v": "Date(2009, 1, 28)","f":null},{"v":30000,"f":null}]},
+        {"c":[{"v": "Date(2010, 1, 28)","f":null},{"v":40000,"f":null}]}
+      ]
+}
