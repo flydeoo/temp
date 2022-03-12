@@ -7,14 +7,20 @@
       // Load the Visualization API and the linechart package.
       google.charts.load('current', {'packages':['corechart']});
       
-      
+      var today = new Date();
+      var dd = String(today.getDate() + 2).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yy = today.getFullYear();
+
+      today = yy + "," + mm + "," + dd;
+
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
 
 
       function drawChart() {
         //data
-        var jsonData = $.ajax({
+      var jsonData = $.ajax({
           url: "data.json",
           dataType: "json",
           async: false
@@ -25,23 +31,25 @@
 
 
         //options
-        var options = {
-          title: 'Dollar Rate in Iran',
-          curveType: 'function',
-          legend: { position: 'bottom' },
-          crosshair: { trigger: 'both' },
-          explorer: {}, 
-          
+      var options = {
+          title: "Dollar Rate in Iran",
+          curveType: "function",
+          legend: { position: "bottom" },
+          crosshair: { trigger: "both" },
+          explorer: {},
+
           hAxis: {
-           format: 'yy-mm-dd',
-           title: 'Date'
+            format: "yy-MM-dd",
+            title: "Date",
+            viewWindow: {
+              min: new Date(2022, 2, 8),
+              max: new Date(today)
+            }
           },
 
           vAxis: {
-           title: 'Price'
-          },
-
-
+            title: "Price"
+          }
         };
 
 
