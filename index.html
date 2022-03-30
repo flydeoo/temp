@@ -7,12 +7,12 @@
       // Load the Visualization API and the linechart package.
       google.charts.load('current', {'packages':['corechart']});
       
-      var today = new Date();
-      var dd = String(today.getDate() + 2).padStart(2, "0");
-      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-      var yy = today.getFullYear();
+      var thistoday = new Date();
+      var dd = String(thistoday.getDate() + 2).padStart(2, "0");
+      var mm = String(thistoday.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yy = thistoday.getFullYear();
 
-      today = yy + "," + mm + "," + dd;
+      thistoday = yy + "," + mm + "," + dd;
 
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
@@ -43,7 +43,7 @@
             title: "Date",
             viewWindow: {
               min: new Date(2022, 2, 8),
-              max: new Date(today)
+              max: new Date(thistoday)
             }
           },
 
